@@ -1,7 +1,7 @@
 import React from 'react';
-import {Register} from './Register'
+import { Link } from 'react-router-dom';
 
-export function Login(){
+export function Login(prop){
     const [errorInLogin, setErrorInLogin] = React.useState (false);
     const [errorInPassword, setErrorInPassword] = React.useState (false);
     const [form,setForm] = React.useState({
@@ -19,8 +19,8 @@ export function Login(){
         }
         setErrorInLogin(false);
         setErrorInPassword(false);
-        if(prompt.onLogin)
-            prompt.onLogin (form);
+        if(prop.onLogin)
+            prop.onLogin(form);
     };
     const updateComponent =  ()=>{
         setForm({login: form.login, password: form.password})
@@ -33,7 +33,6 @@ export function Login(){
         form.password = e.target.value;
         updateComponent();
     }
-
     return(
     <div>
         <h2>Sign in</h2>
@@ -57,10 +56,13 @@ export function Login(){
                 <label className="form-check-label" htmlFor="remember">Remember me </label>
             </div>
             <div className="form-group mt-2">
-                 <button class="btn btn-success w-100">Log in</button>
+                 <button className="btn btn-success w-100">Log in</button>
             </div>
             <div className="form-group">
-                <button type="button" class="btn btn-outline-secondary w-100" onClick={Register} >Sign up</button>
+                <Link to='/register'>
+                    <button className="btn btn-outline-secondary w-100" >Sign Up</button>
+                </Link>
+               
             </div>
             
         </form>
