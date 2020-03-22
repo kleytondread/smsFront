@@ -1,0 +1,43 @@
+#formRegister{
+    background-color: white;
+    width: 400px;
+    padding: 10px;;    
+    outline-width: 3px ;
+    outline-offset:0px;
+    shape-outside: initial;
+}
+#formLogin{
+    width: 400px;
+    background-color: white;
+    padding: 10px;
+    outline-width: 3px ;
+}
+#redStripe{
+    height: 10px;
+    width: 100%;
+    background-color: #e4462eed;
+}
+.white-btn-grey-border{
+    border: 2px solid #8d8d8d;
+    color: #8d8d8d;
+    outline:'3px';
+    outline-color:#8d8d8d; 
+    background-color: white;
+    width: 367px;
+    height: 50px;
+    font-family: 'Gill Sans', sans-serif;
+    font-weight: 900;
+    font-size: 20px
+}
+.green-btn{
+    border: 0px;
+    color: white;
+    background-Color: #3e8a28; 
+    width: 367px;
+    height: 50px;
+    font-family: 'Gill Sans', sans-serif;
+    font-weight: 900;
+    font-size: 20px
+}
+
+

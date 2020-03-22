@@ -54,7 +54,7 @@ export class HomePage extends React.Component{
                     {this.renderLogin()}
                 </Route>
                 <Route path ='/register'>
-                    {this.renderRegister()}>
+                    {this.renderRegister()}
                 </Route>
             </div>
         );
