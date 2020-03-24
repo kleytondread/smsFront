@@ -4,7 +4,7 @@ import axios from 'axios';
 import './Home.css';
 
 export function UserHomeScreen() {
-    const [form, setForm] = React.useState({
+    /*const [form, setForm] = React.useState({
         text : '',
         sender: '',
         recipient: ''
@@ -31,7 +31,7 @@ export function UserHomeScreen() {
     } 
     const getSender = () =>{
         //something to que sender id (maybe a get request)
-    }
+    }*/
     return (
         <div>
 
@@ -57,9 +57,9 @@ export function UserHomeScreen() {
                     </div>
                     <div className="send-message-field">
                         <div>
-                            <form onSubmit={trySendMessage}>
-                                <input className="send-message-bar" type="text" placeholder="Message..." value={form.text} onChange={updateMessage}/>
-                                <span class="fa-stack fa-2x" style={{ color: '#cecece', left :'30px'}}>
+                            <form>
+                                <input className="send-message-bar" type="text" placeholder="Message..."/>
+                                <span class="fa-stack fa-2x" style={{ color: '#cecece', left :'20px'}}>
                                     <i class="fas fa-circle fa-stack-2x" style={{ color: '#cecece'}} ></i>
                                     <i class="fas fa-paper-plane fa-stack-1x fa-inverse" type="submit" title="Send Text"></i>
                                 </span>

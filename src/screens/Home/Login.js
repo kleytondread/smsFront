@@ -61,11 +61,13 @@ export function Login(prop) {
                 </div>
                     </div>
                     <div className="form-check">
-                        <input className="form-check-input" id="remember" type="checkbox"/>
+                        <input className="form-check-input" id="remember" type="checkbox" />
                         <label className="form-check-label" htmlFor="remember">Remember me </label>
                     </div>
                     <div className="form-group mt-2">
-                        <button className="btn-pitang green-btn">SIGN IN</button>
+                        <Link to='/user'>
+                            <button className="btn-pitang green-btn">SIGN IN</button>
+                        </Link>
                     </div>
                     <div className="form-group">
                         <Link to='/register'>

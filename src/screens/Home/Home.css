@@ -21,12 +21,15 @@
     height: 50px;
     font-family: 'Gill Sans', sans-serif;
     font-weight: 900;
-    font-size: 20px
+    font-size: 20px;
+}
+.btn-pitang:focus{
+    outline: none;
 }
 .white-btn{
     border: 2px solid #8d8d8d;
     color: #8d8d8d;
-    outline:'3px';
+    outline: none;
     outline-color:#8d8d8d; 
     background-color: white;
 }
@@ -54,8 +57,9 @@
 }
 .message-board{
     background-color: white;
-    width: 1360px;
+    width: 890px;
     height: 625px;
+    overflow: hidden;
 }
 .search-bar{
     text-align: justify;
@@ -65,17 +69,20 @@
     border-radius: 20px;
     width: 450px;
 }
+.search-bar:focus{
+    outline: none;
+}
 .chat-room{
     height: 535px;
     width: 1360px;
 }
 .send-message-field{
-    
     height: 90px;
-    width: 1360px;
+    width: 890px;
     background-color: #e5e5e5;
     padding-top: 20px;
-    padding-left: 20px;
+    padding-left: 30px;
+    overflow: hidden;
 }
 .send-message-bar{
     height: 50px;
@@ -86,4 +93,9 @@
     background-color: #d2d2d2;
     border-radius: 20px;
 }
-
+.send-message-bar:focus{
+    outline: none;
+}
+.display-dft{
+    display: none;
+}

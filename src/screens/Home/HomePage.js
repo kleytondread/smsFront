@@ -19,6 +19,7 @@ export class HomePage extends React.Component{
             userName : form.userName    ,
             password : form.password
         }).then();
+        //return this.renderUserHomeScreen()
     }
     async tryRegister(form){
         console.log(form);
@@ -33,16 +34,16 @@ export class HomePage extends React.Component{
         }).then();
     }
     renderUserHomeScreen(){
-        return (<UserHomeScreen/>)
+        return <UserHomeScreen/>;
     }
-    goToLogin(){
+    /*goToLogin(){
         this.setState({showRegister: false});
     }
     goToRegister(){
         this.setState({showRegister : true});
-    }
+    }*/
     renderLogin(){
-        return <Login onLogin={(form)=>this.tryLogin(form)} onRegister={()=>this.goToRegister()} />;
+        return <Login onLogin={(form)=>this.tryLogin(form)}/>;
     }
     renderRegister(){
         return <Register onRegister={(form)=>this.tryRegister(form)}/>;
