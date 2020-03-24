@@ -7,12 +7,12 @@ export function Login(prop) {
     const [errorInLogin, setErrorInLogin] = React.useState(false);
     const [errorInPassword, setErrorInPassword] = React.useState(false);
     const [form, setForm] = React.useState({
-        login: '',
+        userName: '',
         password: ''
     });
     const trySubmit = (e) => {
         e.preventDefault();
-        if (!form.login) {
+        if (!form.userName) {
             setErrorInLogin(true);
             return;
         } else if (!form.password) {
@@ -25,10 +25,10 @@ export function Login(prop) {
             prop.onLogin(form);
     };
     const updateComponent = () => {
-        setForm({ login: form.login, password: form.password })
+        setForm({ userName: form.userName, password: form.password })
     }
     const updateLogin = (e) => {
-        form.login = e.target.value;
+        form.userName = e.target.value;
         updateComponent();
     }
     const updatePassword = (e) => {
@@ -38,15 +38,17 @@ export function Login(prop) {
     return (
         <div>
             <div className="w-100 d-flex justify-content-center">
-                <img src='https://jobs.solides.com/assets/img/logos_empresas/logo__pitang.png' width="180px" style={{padding: '15px'}} alt="Pitang Logo"/>
+                <img src='https://jobs.solides.com/assets/img/logos_empresas/logo__pitang.png' width="180px" style={{ padding: '15px' }} alt="Pitang Logo" />
             </div>
-            <div id="redStripe" />
-            <div id="formLogin" className="border-0 shadow p-3 mb-5 bg-white rounded">
-                <h2 style={{ fontWeight: 900, color: '#ffc817', fontSize: '20px' }}>SIGN IN</h2>
+            <div id="red-stripe" />
+            <div id="form" className="border-0 shadow p-3 mb-5 bg-white rounded">
+                <i class="glyphicon glyphicon-cloud"></i>
+
+                <h2 className='form-title'>SIGN IN</h2>
                 <form onSubmit={trySubmit} style={{ fontSize: '14px' }}>
                     <div className="from-group">
                         <label>Login</label>
-                        <input type="text" name="login" value={form.login} onChange={updateLogin} className={"form-control" + (errorInLogin ? " is-invalid" : "")} />
+                        <input type="text" name="userName" value={form.userName} onChange={updateLogin} className={"form-control" + (errorInLogin ? " is-invalid" : "")} />
                         <div className="invalid-feedback">
                             You must fill in the login field.
                 </div>
@@ -59,15 +61,15 @@ export function Login(prop) {
                 </div>
                     </div>
                     <div className="form-check">
-                        <input className="form-check-input" id="remember" type="checkbox" />
+                        <input className="form-check-input" id="remember" type="checkbox"/>
                         <label className="form-check-label" htmlFor="remember">Remember me </label>
                     </div>
                     <div className="form-group mt-2">
-                        <button className="green-btn">SIGN IN</button>
+                        <button className="btn-pitang green-btn">SIGN IN</button>
                     </div>
                     <div className="form-group">
                         <Link to='/register'>
-                            <button className="white-btn-grey-border">SIGN UP</button>
+                            <button className="btn-pitang white-btn">SIGN UP</button>
                         </Link>
 
                     </div>

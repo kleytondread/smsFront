@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import { Login } from './Login';
+import { UserHomeScreen } from './UserHomeScreen';
 import { Register } from './Register';
 import axios from 'axios';
 import { Route } from 'react-router-dom';
@@ -14,16 +15,16 @@ export class HomePage extends React.Component{
     }t
     async tryLogin(form){
         console.log (form);
-        await axios.get('http://localhost:8080/user',{
-            userName : form.Login,
+        await axios.post('http://localhost:8080/user',{
+            userName : form.userName    ,
             password : form.password
         }).then();
     }
     async tryRegister(form){
         console.log(form);
         await axios.post('http://localhost:8080/user',{
-            login : form.login,
-            userName : form.Login, //não tá funcionando, ele não é enviado na JSON
+            //login : form.login,
+            userName : form.userName, //não tá funcionando, ele não é enviado na JSON
             password : form.password,
             firstName : form.firstName,
             lastName : form.lastName,
@@ -31,7 +32,9 @@ export class HomePage extends React.Component{
             status : 'Ativo'
         }).then();
     }
-
+    renderUserHomeScreen(){
+        return (<UserHomeScreen/>)
+    }
     goToLogin(){
         this.setState({showRegister: false});
     }
@@ -55,6 +58,9 @@ export class HomePage extends React.Component{
                 </Route>
                 <Route path ='/register'>
                     {this.renderRegister()}
+                </Route>
+                <Route path='/user'>
+                    {this.renderUserHomeScreen()}
                 </Route>
             </div>
         );

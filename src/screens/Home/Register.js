@@ -8,7 +8,7 @@ export function Register(prop) {
     const [errorInFirstName, setErrorInFirstName] = React.useState(false);
     const [errorInEmail, setErrorInEmail] = React.useState(false);
     const [form, setForm] = React.useState({
-        login: '',
+        userName: '',
         password: '',
         confirmPassword: '',
         firstName: '',
@@ -18,7 +18,7 @@ export function Register(prop) {
     const trySubmit = (e) => {
         e.preventDefault();
         let err = false;
-        if (!form.login) {
+        if (!form.userName) {
             setErrorInLogin(true);
             err = true;
         } else if (!form.password) {
@@ -47,7 +47,7 @@ export function Register(prop) {
     };
     const updateComponent = () => {
         setForm({
-            login: form.login,
+            userName: form.userName,
             password: form.password,
             confirmPassword: form.confirmPassword,
             firstName: form.firstName,
@@ -56,7 +56,7 @@ export function Register(prop) {
         })
     }
     const updateLogin = (e) => {
-        form.login = e.target.value;
+        form.userName = e.target.value;
         updateComponent();
     }
     const updatePassword = (e) => {
@@ -84,14 +84,24 @@ export function Register(prop) {
             <div className="w-100 d-flex justify-content-center">
                 <img src='https://jobs.solides.com/assets/img/logos_empresas/logo__pitang.png' width="180px" style={{ padding: '15px' }} alt="Pitang Logo" />
             </div>
-            <div id="redStripe" />
-            <div id="formRegister" className="border-0 shadow p-3 mb-5 bg-white rounded">
-
-                <h2 style={{ fontWeight: 900, color: '#ffc817', fontSize: '20px', paddingLeft: '50px', display: 'block' }}>REGISTER</h2>
-                <form onSubmit={trySubmit} style={{ fontSize: '14px' }}>
+            <div id="red-stripe" />
+            <div id="form" className="border-0 shadow p-3 mb-5 bg-white rounded">
+                <div>
+                    <span>
+                        <Link to='/login'>
+                            <i class="fas fa-arrow-left fa-2x"
+                                title="Voltar"
+                                style={{ float: 'left', paddingTop: '5px', paddingRight: '10px', color: '#cbcbcb' }} />
+                        </Link>
+                    </span>
+                    <span>
+                        <h2 className='form-title'>REGISTER</h2>
+                    </span>
+                </div>
+                <form onSubmit={trySubmit} style={{ fontSize: '14px', paddingTop: '5px' }}>
                     <div className="from-group">
                         <label>Username</label>
-                        <input type="text" name="login" value={form.login} onChange={updateLogin} className={"form-control" + (errorInLogin ? " is-invalid" : "")} />
+                        <input type="text" name="userName" value={form.userName} onChange={updateLogin} className={"form-control" + (errorInLogin ? " is-invalid" : "")} />
                         <div className="invalid-feedback">
                             You must fill in the username field.
                 </div>
@@ -133,12 +143,10 @@ export function Register(prop) {
                         <label className="form-check-label" htmlFor="acceptTermsService">I accept the Terms of Service </label>
                     </div>
                     <div className="form-group mt-2">
-                        <button class="green-btn">REGISTER</button>
+                        <button class="btn-pitang green-btn">REGISTER</button>
                     </div>
                     <div className="form-group">
-                        <Link to='/login'>
-                            <button class="white-btn-grey-border">BACK</button>
-                        </Link>
+
                     </div>
 
                 </form>
