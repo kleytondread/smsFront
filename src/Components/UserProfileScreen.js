@@ -59,6 +59,14 @@ export function UserProfileScreen() {
                             </span>
                         </div>
                     </form>
+                    <div>
+                        <div>
+                        <span style={{ position: "relative", top: '150px', left: '210px', display: "inline"}}>Becareful this will delete you account PERMANENTLY!</span>
+                            <button className="border-0 shadow" 
+                            style={{ margin: '110px 20px 0px 600px', color: '#ffffff', 
+                            backgroundColor: '#e4462e', height:'40px', width: '150px', fontWeight: "bold", display: "inline"}}>DELETE ACCOUNT</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
