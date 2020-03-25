@@ -4,6 +4,11 @@
     width: 400px;
     padding: 10px;;    
 }
+.form-profile{
+    color: #b0b0b0;
+    background-color: white;
+    padding: 30px 30px 10%;  
+}
 .form-title{
     font-weight: 900;
     color: #ffc817;
@@ -23,7 +28,7 @@
     font-weight: 900;
     font-size: 20px;
 }
-.btn-pitang:focus{
+button:focus{
     outline: none;
 }
 .white-btn{
@@ -36,7 +41,7 @@
 .green-btn{
     border: none;
     color: white;
-    background-Color: #3e8a28; 
+    background-color: #3e8a28; 
 }
 .grey-layer{
     background-color: #9e9e9e;
@@ -57,7 +62,7 @@
 }
 .message-board{
     background-color: white;
-    width: 890px;
+    width: 885px;
     height: 625px;
     overflow: hidden;
 }
@@ -90,7 +95,7 @@
     padding-left: 20px;
     text-align: justify;
     border: none;
-    background-color: #d2d2d2;
+    background-color: #ffffff;
     border-radius: 20px;
 }
 .send-message-bar:focus{
@@ -99,3 +104,22 @@
 .display-dft{
     display: none;
 }
+.picture-round{
+    background-color: #fe8b79;
+    border-radius: 50%;
+}
+.align-center{
+    margin: 25%;
+    width: 50%;
+}
+.bright-yellow{
+    color: #ffc817;
+}
+.light-grey{
+   color: #cbcbcb;  
+}
+.light-grey{
+    color: #ffffff;  
+ }
+
+

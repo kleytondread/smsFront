@@ -46,14 +46,14 @@ export function Login(prop) {
 
                 <h2 className='form-title'>SIGN IN</h2>
                 <form onSubmit={trySubmit} style={{ fontSize: '14px' }}>
-                    <div className="from-group">
+                    <div className="form-group">
                         <label>Login</label>
                         <input type="text" name="userName" value={form.userName} onChange={updateLogin} className={"form-control" + (errorInLogin ? " is-invalid" : "")} />
                         <div className="invalid-feedback">
                             You must fill in the login field.
                 </div>
                     </div>
-                    <div className="from-group">
+                    <div className="form-group">
                         <label>Password</label>
                         <input type="password" value={form.password} onChange={updatePassword} className={"form-control" + (errorInPassword ? " is-invalid" : "")} />
                         <div className="invalid-feedback">

@@ -99,44 +99,44 @@ export function Register(prop) {
                     </span>
                 </div>
                 <form onSubmit={trySubmit} style={{ fontSize: '14px', paddingTop: '5px' }}>
-                    <div className="from-group">
+                    <div className="form-group">
                         <label>Username</label>
                         <input type="text" name="userName" value={form.userName} onChange={updateLogin} className={"form-control" + (errorInLogin ? " is-invalid" : "")} />
                         <div className="invalid-feedback">
                             You must fill in the username field.
-                </div>
+                        </div>
                     </div>
-                    <div className="from-group">
+                    <div className="form-group">
                         <label>Password</label>
                         <input type="password" value={form.password} onChange={updatePassword} className={"form-control" + (errorInPassword ? " is-invalid" : "")} />
                         <div className="invalid-feedback">
                             You must fill in the password field.
-                </div>
+                        </div>
                     </div>
-                    <div className="from-group">
+                    <div className="form-group">
                         <label>Confirm Password</label>
                         <input type="password" value={form.confirmPassword} onChange={updateConfirmPassword} className={"form-control" + (errorInConfirmPassword ? " is-invalid" : "")} />
                         <div className="invalid-feedback">
                             This field needs be be equal to your Password.
-                </div>
+                        </div>
                     </div>
-                    <div>
+                    <div className="form-group">
                         <label>First name</label>
                         <input type="text" value={form.firstName} onChange={updateFirstName} className={"form-control" + (errorInFirstName ? " is-invalid" : "")} />
                         <div className="invalid-feedback">
                             You need to have a first name.
-                </div>
+                        </div>
                     </div>
-                    <div>
+                    <div className="form-group">
                         <label>Last name</label>
                         <input type="text" value={form.lastName} onChange={updateLastName} className={"form-control"} />
                     </div>
-                    <div>
+                    <div className="form-group">
                         <label>Email address</label>
                         <input type="text" value={form.email} onChange={updateEmail} className={"form-control" + (errorInEmail ? " is-invalid" : "")} />
                         <div className="invalid-feedback">
                             You need to have an email.
-                </div>
+                        </div>
                     </div>
                     <div className="form-check">
                         <input className="form-check-input" id="acceptTermsService" type="checkbox" />
@@ -145,10 +145,6 @@ export function Register(prop) {
                     <div className="form-group mt-2">
                         <button class="btn-pitang green-btn">REGISTER</button>
                     </div>
-                    <div className="form-group">
-
-                    </div>
-
                 </form>
             </div>
         </div>

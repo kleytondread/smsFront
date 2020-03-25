@@ -1,7 +1,8 @@
 import React from 'react';
 //import { Link } from 'react-router-dom';
-import axios from 'axios';
+//import axios from 'axios';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 export function UserHomeScreen() {
     /*const [form, setForm] = React.useState({
@@ -35,15 +36,19 @@ export function UserHomeScreen() {
     return (
         <div>
 
-            <div className="grey-layer fa-2x">
-                <span style={{ paddingRight: '290px' }} ><i class="fas fa-user" title="Profile"></i></span>
+            <div className="grey-layer fa-2x shadow">
+                <span style={{ paddingRight: '290px' }} >
+                    <Link to='/userprofile'>
+                        <i class="fas fa-user bright-yellow" title="Profile"></i>
+                    </Link>
+                </span>
                 <span style={{ paddingRight: '25px' }}><i class="fas fa-user-plus" title="Add User"></i></span>
                 <span style={{ paddingRight: '25px' }} ><i class="fas fa-comment-alt"></i></span>
                 <span style={{ paddingRight: '860px' }}><i class="fas fa-ellipsis-v"></i></span>
                 <span><i class="fas fa-ellipsis-v"></i></span>
             </div>
             <div>
-                <div className="contact-list">
+                <div className="contact-list shadow" >
                     <div style={{ height: "45px", paddingLeft: "12px", paddingTop: "8px", backgroundColor: "#e5e5e5" }}>
                         <i class="fas fa-search" title="Search"
                             style={{ position: 'absolute', paddingTop: '5px', paddingLeft: "10px", color: "#545454" }}></i>
@@ -51,9 +56,9 @@ export function UserHomeScreen() {
                     </div>
 
                 </div>
-                <div className="message-board">
+                <div className="message-board shadow">
                     <div className="chat-room">
-
+                        
                     </div>
                     <div className="send-message-field">
                         <div>

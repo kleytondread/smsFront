@@ -5,6 +5,7 @@ import { UserHomeScreen } from './UserHomeScreen';
 import { Register } from './Register';
 import axios from 'axios';
 import { Route } from 'react-router-dom';
+import { UserProfileScreen } from '../Components/UserProfileScreen.js';
 
 export class HomePage extends React.Component{
     constructor(){
@@ -36,6 +37,9 @@ export class HomePage extends React.Component{
     renderUserHomeScreen(){
         return <UserHomeScreen/>;
     }
+    renderUserProfileScreen(){
+        return <UserProfileScreen/>;
+    }
     /*goToLogin(){
         this.setState({showRegister: false});
     }
@@ -62,6 +66,9 @@ export class HomePage extends React.Component{
                 </Route>
                 <Route path='/user'>
                     {this.renderUserHomeScreen()}
+                </Route>
+                <Route path='/userprofile'>
+                    {this.renderUserProfileScreen()}
                 </Route>
             </div>
         );

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { HomePage } from './screens/Home/HomePage';
+import { HomePage } from './Home/HomePage';
 import { Router, Switch } from 'react-router-dom';
 import { createBrowserHistory} from 'history';
 const history = createBrowserHistory();
