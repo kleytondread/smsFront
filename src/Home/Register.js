@@ -89,9 +89,9 @@ export function Register(prop) {
                 <div>
                     <span>
                         <Link to='/login'>
-                            <i class="fas fa-arrow-left fa-2x"
+                            <i class="fas fa-arrow-left fa-2x light-grey"
                                 title="Voltar"
-                                style={{ float: 'left', paddingTop: '5px', paddingRight: '10px', color: '#cbcbcb' }} />
+                                style={{ float: 'left', paddingTop: '5px', paddingRight: '10px'}} />
                         </Link>
                     </span>
                     <span>

@@ -15,10 +15,10 @@ export function UserProfileScreen() {
             <div>
                 <div className='contact-list shadow'>
                     <div style={{height: '400px', width: '470px'}}>
-                        <img className='picture-round align-center' src="https://pngimage.net/wp-content/uploads/2018/06/flat-user-icon-png-2.png"></img>
+                        <img className='picture-round align-center' src="https://pngimage.net/wp-content/uploads/2018/06/flat-user-icon-png-2.png" alt="Userprofile"></img>
                     </div>
                     <div style={{paddingLeft: '20px'}}>
-                        <button className="border-0 shadow p-3 mb-5 bg-white rounded" style={{margin: "auto 30%", color: '#8d8d8d', fontWeight: "bold"}}> CHANGE PICTURE</button>
+                        <button className="border-0 shadow p-3 mb-5 rounded white-btn" style={{margin: "auto 30%", color: '#8d8d8d', fontWeight: "bold"}}> CHANGE PICTURE</button>
                     </div>
                 </div>
                 <div className='message-board form-profile shadow' style={{color: '#9e9e9e'}}>
@@ -50,21 +50,20 @@ export function UserProfileScreen() {
                         </div>
                         <div style={{padding: '12px 20px 0px 0px' }}>
                             <span style={{float: 'left', paddingRight: '400px'}}>
-                            <button className="border-0 shadow" 
-                                style={{color: '#ffffff', backgroundColor: '#9e9e9e', height:'40px', width: '200px', fontWeight: "bold"}}> CHANGE PASSWORD</button>
+                            <button className="white-btn" 
+                                style={{ height:'40px', width: '200px', fontWeight: "bold"}}> CHANGE PASSWORD</button>
                             </span>
                             <span>
-                                <button className="border-0 shadow" 
-                                style={{color: '#ffffff', backgroundColor: '#3e8a28', height:'40px', width: '150px', fontWeight: "bold"}}> SUBMIT</button>
+                                <button className="border-0 shadow green-btn" 
+                                style={{ height:'40px', width: '150px', fontWeight: "bold"}}> SUBMIT</button>
                             </span>
                         </div>
                     </form>
                     <div>
                         <div>
                         <span style={{ position: "relative", top: '150px', left: '210px', display: "inline"}}>Becareful this will delete you account PERMANENTLY!</span>
-                            <button className="border-0 shadow" 
-                            style={{ margin: '110px 20px 0px 600px', color: '#ffffff', 
-                            backgroundColor: '#e4462e', height:'40px', width: '150px', fontWeight: "bold", display: "inline"}}>DELETE ACCOUNT</button>
+                            <button className="border-0 shadow red-btn" 
+                            style={{ margin: '110px 20px 0px 600px', height:'40px', width: '150px', display: "inline"}}>DELETE ACCOUNT</button>
                         </div>
                     </div>
                 </div>

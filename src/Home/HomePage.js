@@ -14,13 +14,17 @@ export class HomePage extends React.Component{
             showRegister: false
         };
     }t
-    async tryLogin(form){
+    tryLogin(form){
+        debugger
         console.log (form);
-        await axios.post('http://localhost:8080/user',{
+        if(!!form){
+            return this.renderUserHomeScreen();
+        }else{
+        }
+        /*await axios.post('http://localhost:8080/user',{
             userName : form.userName    ,
             password : form.password
-        }).then();
-        //return this.renderUserHomeScreen()
+        }).then();*/
     }
     async tryRegister(form){
         console.log(form);
