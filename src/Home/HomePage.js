@@ -15,16 +15,15 @@ export class HomePage extends React.Component{
         };
     }t
     tryLogin(form){
-        debugger
         console.log (form);
         if(!!form){
             return this.renderUserHomeScreen();
         }else{
         }
-        /*await axios.post('http://localhost:8080/user',{
+        await axios.post('http://localhost:8080/user',{
             userName : form.userName    ,
             password : form.password
-        }).then();*/
+        }).then();
     }
     async tryRegister(form){
         console.log(form);
